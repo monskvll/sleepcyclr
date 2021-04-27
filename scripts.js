@@ -1,5 +1,3 @@
-document.getElementById('timeButton').addEventListener('click', getTime);
-
 function pad(value) {
     if (value < 10) {
         return '0' + value;
@@ -10,8 +8,6 @@ function pad(value) {
 
 function getTime() {
     let currentTime = new Date();
-
-    document.getElementById('zeroCycleTime').textContent = pad(currentTime.getHours()) + ':' + pad(currentTime.getMinutes());
 
     document.getElementById('firstCycleTime').textContent = pad((currentTime.getHours() + 1) % 24) + ':' + pad((currentTime.getMinutes() + 45) % 60);
 
@@ -25,3 +21,5 @@ function getTime() {
 
     document.getElementById('sixthCycleTime').textContent = pad((currentTime.getHours() + 9) % 24) + ':' + pad((currentTime.getMinutes() + 15) % 60);
 }
+
+document.getElementById('timeButton').addEventListener('click', getTime);
