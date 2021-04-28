@@ -22,7 +22,8 @@ html, body {
 
 .cycle-time {
     font-weight: bolder;
-    font-size: 2em;
+    font-size: 1.5em;
+    padding: 0em .5em;
 }
 
 .cycle-info {
