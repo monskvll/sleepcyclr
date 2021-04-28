@@ -1,0 +1,60 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.whole-block {
+    display: flex;
+    flex-direction: column;    
+    text-align: center;
+    height: 100%;
+    min-height: 100%;    
+}
+
+.hour-block {
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgba(0, 0, 0, .6);
+    font-family: 'Courier New', monospace;    
+}  
+
+.cycle-time {
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+.cycle-info {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.hour-block-1 {
+    background-color: #772e25;
+}
+
+.hour-block-2 {
+    background-color: #c44536;
+}
+
+.hour-block-3 {
+    background-color: #cd6a5e;
+}
+
+.hour-block-4 {
+    background-color: #54adb3;
+}
+
+.hour-block-5 {
+    background-color: #197278;
+}
+
+.hour-block-6 {
+    background-color: #153f47;
+}
+
+#time-button {
+    color: red;
+}
+
+
