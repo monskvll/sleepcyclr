@@ -2,24 +2,23 @@ function pad(value) {
     if (value < 10) {
         return '0' + value;
     } else {
-        return value
+        return value;
     }
 }
 
-function getTime() {
-    let currentTime = new Date();
+function calculateTime() {
+    let time = new Date();
 
-    document.getElementById('firstCycleTime').textContent = pad((currentTime.getHours() + 1) % 24) + ':' + pad((currentTime.getMinutes() + 45) % 60);
+    for (let i = 1; i < 7; i++) {
 
-    document.getElementById('secondCycleTime').textContent = pad((currentTime.getHours() + 3) % 24) + ':' + pad((currentTime.getMinutes() + 15) % 60);
+        function cycleIterator(i) {
+            return i * 90 * 60000;
+        };
 
-    document.getElementById('thirdCycleTime').textContent = pad((currentTime.getHours() + 4) % 24) + ':' + pad((currentTime.getMinutes() + 45) % 60);
+        time.setTime(time.getTime() + cycleIterator(1));
 
-    document.getElementById('fourthCycleTime').textContent = pad((currentTime.getHours() + 6) % 24) + ':' + pad((currentTime.getMinutes() + 15) % 60);
-
-    document.getElementById('fifthCycleTime').textContent = pad((currentTime.getHours() + 7) % 24) + ':' + pad((currentTime.getMinutes() + 45) % 60);
-
-    document.getElementById('sixthCycleTime').textContent = pad((currentTime.getHours() + 9) % 24) + ':' + pad((currentTime.getMinutes() + 15) % 60);
+        document.getElementById('CycleTime' + i).textContent = pad(time.getHours()) + ':' + pad(time.getMinutes());
+    }
 }
 
-document.getElementById('timeButton').addEventListener('click', getTime);
+calculateTime();
