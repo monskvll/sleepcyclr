@@ -53,23 +53,3 @@ html, body {
 .hour-block-6 {
     background-color: #153f47;
 }
-
-#timeButton {
-    background-color: #0f0f0f;
-    color: white;
-    border: none;
-    height: 4em;
-    font-weight: bold;
-    font-family: inherit;
-    transition-duration: 150ms;
-}
-
-#timeButton:hover {
-    background-color: white;
-    color: #0f0f0f;
-}
-
-#timeButton:active {
-    background-color: #a7a7a7;
-}
-
